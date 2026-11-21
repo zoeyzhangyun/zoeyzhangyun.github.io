@@ -1,0 +1,39 @@
+title: "Zoey Zhang"
+url: "https://zoeyzhangyun.github.io"
+baseurl: ""
+lang: en
+timezone: Asia/Shanghai
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
+permalink: /journal/:title/
+collections:
+  projects:
+    output: true
+    permalink: /work/:name/
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: entry
+      kind: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: entry
+      kind: project
+exclude:
+  - README.md
+  - docs
+  - templates
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tools
