@@ -1,0 +1,39 @@
+# Edit shared personal information and homepage text here.
+browserTitle: Zoey Zhang — cities, data & daily life
+brandName: Zoey Zhang
+nameLine: spatial fieldnotes
+eyebrow: Cities · People · Data
+headlineFirst: Spaces, people,
+headlineSecond: 'and '
+headlineAccent: daily life.
+introduction: Hi, I’m Zoey Zhang. My background is in urban planning, with interests in public spaces,
+  community life, and spatial data analysis. This is where I collect my work, learning notes, and
+  observations.
+portfolioTitle: Projects & explorations
+journalTitle: Notes along the way.
+aboutFirst: Hi, I’m
+aboutSecond: Zoey Zhang.
+bio:
+- My background is in urban planning, in both study and practice. I am interested in community public
+  spaces, people–environment relationships, and the use of spatial data in urban research.
+- I want to make the questions that emerge from research and practice easier to explain, visualize,
+  and discuss. This website is an ongoing effort to organize that work.
+skills:
+- GIS
+- Python
+- Spatial analysis
+- Network analysis
+- Field observation
+education:
+- Xiamen University · Bachelor’s degree in Urban and Rural Planning
+- Southeast University · Master’s degree in Urban Planning
+github: https://github.com/zoeyzhangyun
+notice: Work in progress · Some projects and article ideas are examples.
+show_notice: true
+project_filters:
+- id: space
+  label: Space & community
+- id: data
+  label: Data & methods
+- id: field
+  label: Fieldnotes
