@@ -1,0 +1,11 @@
+<div class="post-list">
+  {% assign listed_posts = site.posts %}
+  {% if include.limit %}{% assign listed_posts = listed_posts | slice: 0, include.limit %}{% endif %}
+  {% for post in listed_posts %}
+    <article class="post-item">
+      <span class="meta">{% if post.label %}{{ post.label | escape }}{% else %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %-d, %Y' }}</time>{% if post.category %} · {{ post.category | escape }}{% endif %}{% endif %}</span>
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+      <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 190 | escape }}</p>
+    </article>
+  {% else %}<p>New journal entries will appear here.</p>{% endfor %}
+</div>

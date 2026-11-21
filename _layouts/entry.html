@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="entry">
+  <header class="entry-head">
+    {% if page.kind == 'project' %}
+      <a class="back-link" href="{{ '/work/' | relative_url }}">All projects</a>
+    {% elsif page.kind == 'post' %}
+      <a class="back-link" href="{{ '/journal/' | relative_url }}">All journal entries</a>
+    {% else %}
+      <a class="back-link" href="{{ '/' | relative_url }}">Home</a>
+    {% endif %}
+    {% if page.label %}<p class="eyebrow">{{ page.label | escape }}</p>{% elsif page.kind == 'post' %}<p class="eyebrow"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time>{% if page.category %} · {{ page.category | escape }}{% endif %}</p>{% endif %}
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.summary %}<p class="entry-summary">{{ page.summary | escape }}</p>{% endif %}
+    {% if page.sample %}<p class="sample-note">{{ page.sample_note | default: 'This is an example entry. A completed project or article has not yet been added.' | escape }}</p>{% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+  {% if page.tags.size > 0 %}<div class="skills entry-tags" aria-label="Tags">{% for tag in page.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div>{% endif %}
+</article>

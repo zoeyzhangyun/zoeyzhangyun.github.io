@@ -1,0 +1,7 @@
+<article class="project" data-category="{{ project.category | escape }}">
+  {% if project.cover %}<a class="art" href="{{ project.url | relative_url }}" aria-label="{{ project.title | escape }}"><img src="{{ project.cover | relative_url }}" alt="{{ project.cover_alt | default: project.title | escape }}" width="330" height="190" loading="lazy"></a>{% endif %}
+  <span class="tag">{{ project.category_label | escape }}{% if project.sample %} · Sample theme{% endif %}</span>
+  <h3><a href="{{ project.url | relative_url }}">{{ project.title | escape }}</a></h3>
+  <p>{{ project.summary | escape }}</p>
+  <a class="more" href="{{ project.url | relative_url }}">{% if project.sample %}View the outline{% else %}View project{% endif %}</a>
+</article>

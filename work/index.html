@@ -1,0 +1,11 @@
+---
+title: Work
+description: Projects and explorations in public space, spatial data, and field observation.
+---
+<section class="listing" aria-labelledby="work-title">
+  <div class="section-head"><div><span class="eyebrow">Portfolio</span><h1 id="work-title">{{ site.data.profile.portfolioTitle | escape }}</h1></div><p>Projects and explorations in public spaces, spatial data, and field observation. Example entries are labeled.</p></div>
+  <div class="project-browser" data-project-browser>
+    <div class="filters" role="group" aria-label="Filter project themes"><button class="filter" aria-pressed="true" data-filter="all">All</button>{% for filter in site.data.profile.project_filters %}<button class="filter" aria-pressed="false" data-filter="{{ filter.id | escape }}">{{ filter.label | escape }}</button>{% endfor %}</div>
+    <div class="grid" aria-live="polite">{% assign all_projects = site.projects | sort: 'order' %}{% for project in all_projects %}{% include project-card.html %}{% endfor %}</div>
+  </div>
+</section>

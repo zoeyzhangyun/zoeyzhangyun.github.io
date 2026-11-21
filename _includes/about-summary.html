@@ -1,0 +1,5 @@
+<div class="about-copy">
+  {% for paragraph in site.data.profile.bio %}<p>{{ paragraph | escape }}</p>{% endfor %}
+  <div class="skills" aria-label="Methods and tools">{% for skill in site.data.profile.skills %}<span>{{ skill | escape }}</span>{% endfor %}</div>
+  <div class="education">{% for qualification in site.data.profile.education %}<div>{{ qualification | escape }}</div>{% endfor %}</div>
+</div>
